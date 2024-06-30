@@ -22,10 +22,10 @@ export default function App({ children }) {
     const keysCheck = keys.filter((key, index) => values[index] === null || values[index] === '')
 
     if (valuesCheck && keysCheck.length > 1) {
-      alert(`You have to complete the fields ${keysCheck.join(' and ').toLocaleLowerCase()}`)
+      alert(`You have to fill in the fields ${keysCheck.join(' and ').toLocaleLowerCase()}`)
       return;
     } else if (valuesCheck && keysCheck.length === 1) {
-      alert(`You have to complete the field ${keysCheck.toString().toLocaleLowerCase()}`)
+      alert(`You have to fill in the field ${keysCheck.toString().toLocaleLowerCase()}`)
       return;
     }
     dispatch({ type: 'Add', data: form })
@@ -46,11 +46,11 @@ export default function App({ children }) {
             <label className='label'>
               Title
             </label>
-            <input onChange={(e) => onChange(e, 'Title')} value={form.Title} type="text" className='input' />
+            <input onChange={(e) => onChange(e, 'Title')} value={form.Title} placeholder='Type a title' type="text" className='input' />
             <label className='label'>
               Description
             </label>
-            <input onChange={(e) => onChange(e, 'Description')} value={form.Description}  type="text" className='input' />
+            <input onChange={(e) => onChange(e, 'Description')} placeholder='Type a description' value={form.Description}  type="text" className='input' />
             <button onClick={(e) => onClick(e)} className='button' >Add card</button>
           </form>
         </div>
