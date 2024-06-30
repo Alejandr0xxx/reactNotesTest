@@ -21,6 +21,17 @@ function cardReducer(state, action) {
             localStorage.setItem('memory', JSON.stringify(newState))
             return newState
         }
+        case 'Delete':{
+            const id = action.id
+            const newOrder = state.order.filter(order => order !== id)
+            delete state.data[id]
+            const newState = {
+                order: newOrder,
+                data: state.data
+            }
+            localStorage.setItem('memory', JSON.stringify(newState))
+            return newState
+        }
     }
 }
 

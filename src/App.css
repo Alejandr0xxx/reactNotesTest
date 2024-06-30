@@ -45,6 +45,7 @@ html {
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 0.3rem;
+    cursor: pointer;
 }
 
 .cardContainer {
@@ -68,4 +69,14 @@ html {
 
 .description{
     font-size: 0.9rem;
+}
+
+.delButon{
+    background-color: rgb(247, 77, 77);
+    border: none;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 0.3rem;
+    cursor: pointer;
 }

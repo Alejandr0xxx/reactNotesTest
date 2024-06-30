@@ -22,10 +22,10 @@ export default function App({ children }) {
     const keysCheck = keys.filter((key, index) => values[index] === null || values[index] === '')
 
     if (valuesCheck && keysCheck.length > 1) {
-      alert(`Te falto completar los campos ${keysCheck.join(', ')}`)
+      alert(`You have to complete the fields ${keysCheck.join(' and ').toLocaleLowerCase()}`)
       return;
     } else if (valuesCheck && keysCheck.length === 1) {
-      alert(`Te falto completar el campo ${keysCheck}`)
+      alert(`You have to complete the field ${keysCheck.toString().toLocaleLowerCase()}`)
       return;
     }
     dispatch({ type: 'Add', data: form })
